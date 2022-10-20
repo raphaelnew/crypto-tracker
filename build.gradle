@@ -22,6 +22,11 @@ buildscript {
         hilt_androidx_version = "1.0.0"
         hilt_navigation_compose = "1.0.0"
 
+        //Network related
+        moshi_version = "1.14.0"
+        retrofit_version = "2.9.0"
+        okhttp_version = "4.9.3"
+
         //Other
         timber = "5.0.1"
 
