@@ -1,6 +1,7 @@
 package com.crypto.tracker.di
 
 import com.crypto.tracker.BuildConfig
+import com.crypto.tracker.network.CoingeckoApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import dagger.Module
@@ -58,5 +59,10 @@ object AppModule {
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .client(okHttpClient)
             .build()
+    }
+
+    @Provides
+    fun provideApi(retrofit: Retrofit): CoingeckoApi {
+        return retrofit.create(CoingeckoApi::class.java)
     }
 }
