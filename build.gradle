@@ -17,6 +17,9 @@ buildscript {
         material3_version = '1.0.0-rc01'
         activity_compose = "1.7.0-alpha01"
 
+        // DB
+        room_version = "2.4.3"
+
         // DI
         hilt_version = '2.42'
         hilt_androidx_version = "1.0.0"
