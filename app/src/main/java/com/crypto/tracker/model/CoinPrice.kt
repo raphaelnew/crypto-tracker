@@ -1,5 +1,6 @@
 package com.crypto.tracker.model
 
+import androidx.room.Ignore
 import java.text.NumberFormat
 import java.util.*
 
@@ -10,6 +11,7 @@ import java.util.*
 data class CoinPrice(
     val rawFields: Map<String, String>
 ) {
+    @Ignore
     val lastUpdatedAt: Long? = rawFields["last_updated_at"]?.toLongOrNull()
 
     fun getPrice(currency: String): Double =
