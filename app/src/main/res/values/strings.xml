@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Crypto Tracker</string>
+
+    <!--Home screen-->
+    <string name="header_coin">Coin</string>
+    <string name="header_price">Price (USD)</string>
+    <string name="header_24h">24h %</string>
+    <string name="no_price">No price</string>
+    <string name="loading">Loading…</string>
+    <string name="empty">No data available at this moment</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="default_error_get_prices">Error fetching price</string>
+    <string name="last_24h_change">%1$.2f</string>
+    <string name="price_percentage_template" formatted="false">%1$s%2$s</string>
+    <string name="last_24h_change_content_description">Price change for last 24h</string>
 </resources>
