@@ -3,10 +3,14 @@ package com.crypto.tracker.ui.navigation
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.crypto.tracker.ui.screen.alert.AlertScreen
 import com.crypto.tracker.ui.screen.home.HomeScreen
+import com.crypto.tracker.ui.viewmodel.AlertViewModel
 import com.crypto.tracker.ui.viewmodel.HomeViewModel
 
 /**
@@ -23,9 +27,22 @@ fun MainNavHost(
             HomeScreen(
                 viewModel = viewModel,
                 onNavigateToAlert = { coinId ->
-                    // todo navigate to alert screen.
+                    navController.navigate("alert/$coinId")
                 })
         }
-        //todo alert screen and history screen.
+        composable(
+            "alert/{coinId}",
+            arguments = listOf(navArgument("coinId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val viewModel = hiltViewModel<AlertViewModel>()
+            AlertScreen(
+                coinId = backStackEntry.arguments?.getString("coinId"),
+                viewModel = viewModel,
+                onNavigateToAlertHistory = { coinId ->
+                    //todo navigate to history screen.
+                },
+                onNavigateBack = { navController.navigateUp() })
+        }
+        //todo history screen.
     }
 }
