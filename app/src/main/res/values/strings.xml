@@ -25,4 +25,14 @@
     <string name="history_button">History</string>
     <string name="notification_in_range">Price is in selected Range</string>
     <string name="notification_out_range">Price out of range, saved to History.</string>
+
+    <!--Alert History screen-->
+    <string name="alert_history_screen_title">Alert History: %1$s</string>
+    <string name="history_range">%1$s..%2$s</string>
+    <string name="history_header_range">Min/Max range</string>
+    <string name="history_header_price">Price (USD)</string>
+    <string name="history_header_direction">Lower/Higher</string>
+    <string name="alert_direction_low">Lower</string>
+    <string name="alert_direction_high">Higher</string>
+    <string name="alert_direction_content_description">Alert price lower or higher.</string>
 </resources>
