@@ -65,3 +65,36 @@ val md_theme_dark_primary = Color(0xFFD0BCFF)
 
 
 val seed = Color(0xFF6750A4)
+
+val light_red = Color(0xFFffdee0)
+val light_onRed = Color(0xFFcb414f)
+val light_green = Color(0xFFddfcef)
+val light_onGreen = Color(0xFF20b786)
+val light_grey = Color(0xFFF6F6EE)
+val light_onGrey = Color(0xFF87877e)
+
+val dark_red = Color(0xFFcb414f)
+val dark_onRed = Color(0xFFffdee0)
+val dark_green = Color(0xFF20b786)
+val dark_onGreen = Color(0xFFddfcef)
+val dark_grey = Color(0xFF87877e)
+val dark_onGrey = Color(0xFFF6F6EE)
+
+val ColorScheme.red: Color
+    @Composable
+    get() = if (isSystemInDarkTheme()) dark_red else light_red
+val ColorScheme.onRed: Color
+    @Composable
+    get() = if (isSystemInDarkTheme()) dark_onRed else light_onRed
+val ColorScheme.green: Color
+    @Composable
+    get() = if (isSystemInDarkTheme()) dark_green else light_green
+val ColorScheme.onGreen: Color
+    @Composable
+    get() = if (isSystemInDarkTheme()) dark_onGreen else light_onGreen
+val ColorScheme.grey: Color
+    @Composable
+    get() = if (isSystemInDarkTheme()) dark_grey else light_grey
+val ColorScheme.onGrey: Color
+    @Composable
+    get() = if (isSystemInDarkTheme()) dark_onGrey else light_onGrey
