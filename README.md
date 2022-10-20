@@ -15,3 +15,6 @@ Test assignment Android project
 ## Todo/Improve:
 - Animations/Custom fonts, Ability to clear history (Alerts) for specific coin from DB. 
 
+![Example1](info/light_theme.jpg)
+
+![Example1](info/dark_theme.jpg)
