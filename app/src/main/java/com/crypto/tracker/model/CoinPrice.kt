@@ -1,5 +1,6 @@
 package com.crypto.tracker.model
 
+import java.text.NumberFormat
 import java.util.*
 
 /**
@@ -16,6 +17,15 @@ data class CoinPrice(
 
     fun getPriceOrNull(currency: String): Double? =
         rawFields[currency.lowercase()]?.toDoubleOrNull()
+
+    fun getPriceFormatted(currency: String): String? {
+        // Proper show price formatted (ex. instead of 19170.16 it will be show
+        // in human readable format 19,170.16 etc.)
+        return getPriceOrNull(currency)?.let { price ->
+            NumberFormat.getNumberInstance(Locale.getDefault()).format(price)
+                .toString()
+        }
+    }
 
     fun getMarketCap(currency: String): Double =
         checkNotNull(getMarketCapOrNull(currency))
