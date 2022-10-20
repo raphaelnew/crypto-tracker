@@ -1,6 +1,7 @@
 package com.crypto.tracker.di
 
 import com.crypto.tracker.BuildConfig
+import com.crypto.tracker.data.remote.PricesRemoteDataSource
 import com.crypto.tracker.network.CoingeckoApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
@@ -64,5 +65,13 @@ object AppModule {
     @Provides
     fun provideApi(retrofit: Retrofit): CoingeckoApi {
         return retrofit.create(CoingeckoApi::class.java)
+    }
+
+    @Provides
+    fun providePricesRemoteDataSource(
+        api: CoingeckoApi,
+        retrofit: Retrofit
+    ): PricesRemoteDataSource {
+        return PricesRemoteDataSource(api, retrofit)
     }
 }
