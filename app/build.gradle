@@ -84,6 +84,7 @@ dependencies {
 
     // Other
     implementation "com.jakewharton.timber:timber:$timber"
+    implementation "com.google.accompanist:accompanist-swiperefresh:$swiperefresh"
 
     // Test dependencies
     testImplementation "junit:junit:$junit_version"
@@ -92,4 +93,8 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+}
+
+kapt {
+    correctErrorTypes true
 }

@@ -29,6 +29,7 @@ buildscript {
 
         //Other
         timber = "5.0.1"
+        swiperefresh = "0.26.5-rc"
 
         // Test dependencies
         android_test_implementation = "1.1.3"
