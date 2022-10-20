@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--Only needed for compatibility and only used in Manifest.xml file, not used anywhere else.-->
     <style name="Theme.CryptoTracker" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
