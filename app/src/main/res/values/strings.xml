@@ -13,4 +13,16 @@
     <string name="last_24h_change">%1$.2f</string>
     <string name="price_percentage_template" formatted="false">%1$s%2$s</string>
     <string name="last_24h_change_content_description">Price change for last 24h</string>
+
+    <!--Alert screen-->
+    <string name="alert_screen_title">Alert: %1$s</string>
+    <string name="current_price">Current %1$s price: %2$s</string>
+    <string name="no_current_price">No current price</string>
+    <string name="min_hint">Min</string>
+    <string name="max_hint">Max</string>
+    <string name="min_max_error">Please enter valid Min and Max values.</string>
+    <string name="check_button">Check</string>
+    <string name="history_button">History</string>
+    <string name="notification_in_range">Price is in selected Range</string>
+    <string name="notification_out_range">Price out of range, saved to History.</string>
 </resources>
